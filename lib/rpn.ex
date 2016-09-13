@@ -19,7 +19,6 @@ defmodule Rpn do
       iex> Rpn.calc "1 +"
       NaN
   """
-
   def calc(expression) do
     tokens = expression |> tokenize
     tokens = Enum.map tokens, &normalize_token/1
